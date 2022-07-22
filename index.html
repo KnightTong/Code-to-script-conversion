@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Html Conversion Tools</title>
+  <link rel='stylesheet' href='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <h3>Code to script conversion</h3>
+  <br />
+
+            <div class="alert alert-info" role="alert">
+                <ul class="list-group">
+                    <li class="list-group-item">Html转换为Ajax生成所需要的字符串</li>
+                    <li class="list-group-item">使用自定格式遍历参数，批量生成参数代码块（xparams）</li>
+                  </ul>
+            </div>
+            
+            <div class="panel">
+                <form id="form1" class="form-horizontal" action="/htmltojs/" method="post">
+                <div class="form-group">
+                    <div class="col-sm-8">
+                        <p>要转换的代码</p>
+                        <textarea class="form-control" id="content" rows="12" style="max-height: 2222px;"
+                            placeholder="输入要 拼接 或者 转换的HTML/Js代码"></textarea>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>要转换的参数(可选)</p>
+                        <textarea class="form-control" id="content_params" rows="12" style="max-height: 2222px;"
+                            placeholder="List Params"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <input type="button" onclick="tojs();" value="Html转为Js" class="btn btn-info">
+                            <input type="button" onclick="tohtml();" value="Js转为Html" class="btn btn-info">
+                            <input type="button" onclick="htmltoarray();" value="Html转为Js数组" class="btn btn-info">
+                            <input type="button" onclick="Empty();" value="清空输入框" class="btn btn-danger">
+                            <span id="copyallcode" class="btn btn-default" data-clipboard-target="#result">复制转换结果</span>
+    
+                            <input type="button" onclick="tomc();" value="Free Conversion" class="btn btn-success">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <p>转换结果</p>
+                        <textarea id="result" class="form-control" class="form-control" rows="12" style="max-height: 2222px;"
+                            placeholder="得到转换后的结果">
+</textarea>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        
+</div>
+<!-- partial -->
+  <script src='https://cdn.bootcdn.net/ajax/libs/jquery/1.12.3/jquery.min.js'></script>
+<script src='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
