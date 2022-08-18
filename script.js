@@ -51,7 +51,8 @@ function tomc() {
   console.log(str);
   var s = str.split(",");
   for (var i = 0; i < s.length; i++) {
-    a += content.replace(/xparams/g, s[i]);
+    var ts=content.replace(/xparams/g, s[i]);
+    a += ts.replace(/loop/g, i);
     a += "\n";
     //SS.insertAdjacentHTML("afterEnd",s[i]+'<INPUT type=radio name="radio"><br>');
   }
