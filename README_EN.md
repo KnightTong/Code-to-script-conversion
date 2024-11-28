@@ -1,5 +1,5 @@
 # TongWeiCodePen - HTML Conversion Tools
-*[中文说明](.README.md)*
+*[中文说明](./README.md)*
 
 TongWeiCodePen is an online tool designed for converting snippets of HTML, JS, or JSON code into various formats. This project assists developers in efficiently converting code between different formats.
 
